@@ -1,1 +1,4 @@
 # DS-Group-Project-21
+GenAI for Smarter Data Quality Assurance
+# Expected outcomes
+Development of an automated data quality assurance pipeline that integrates NLP, LLMs, and machine learning for anomaly detection, bias estimation, and FAIRness assessment. Significant reduction in manual effort required for data validation, improving efficiency and accuracy for data stewards and providers. Enhanced metadata validation and completeness, ensuring higher compliance with FAIR principles. A prototype or proof-of-concept demonstrating real-time data validation capabilities. Insights and recommendations on best practices for integrating GenAI-powered tools. Hands-on experience for students in cutting-edge AI-driven data validation techniques, fostering both technical and domain-specific expertise.
