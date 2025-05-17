@@ -1,0 +1,8 @@
+SUMMARY FOR meta-llama/llama-3.3-8b-instruct:free
+==================================================
+
+Issues detected:
+- Feature 50456: Self-intersection detected
+- Feature 21941: Self-intersection detected
+
+Model produced 3 valid responses out of 3 features.

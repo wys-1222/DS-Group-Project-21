@@ -1,0 +1,6 @@
+SUMMARY FOR microsoft/phi-4-reasoning-plus:free
+==================================================
+
+No issues detected in any features.
+
+Model produced 3 valid responses out of 3 features.

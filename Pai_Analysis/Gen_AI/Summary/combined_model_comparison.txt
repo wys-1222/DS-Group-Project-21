@@ -1,0 +1,96 @@
+COMBINED SUMMARY OF TOPOLOGICAL ANALYSES
+==================================================
+
+Feature Analysis by Model:
+------------------------------
+
+FEATURE 21936:
+--------------------
+qwen/qwen3-14b:free: No issues detected
+microsoft/phi-4-reasoning-plus:free: No issues detected
+mistralai/mistral-7b-instruct:free: No issues detected
+qwen/qwen3-32b:free: Detected issues: Self-intersection, Invalid geometry
+meta-llama/llama-3.3-8b-instruct:free: No issues detected
+opengvlab/internvl3-14b:free: Detected issues: Self-intersection
+nousresearch/deephermes-3-mistral-24b-preview:free: Detected issues: Precision/coordinate issue
+
+FEATURE 50456:
+--------------------
+qwen/qwen3-14b:free: No issues detected
+microsoft/phi-4-reasoning-plus:free: No issues detected
+mistralai/mistral-7b-instruct:free: No issues detected
+qwen/qwen3-32b:free: Detected issues: Self-intersection, Ring orientation issue
+meta-llama/llama-3.3-8b-instruct:free: Detected issues: Self-intersection
+opengvlab/internvl3-14b:free: No issues detected
+nousresearch/deephermes-3-mistral-24b-preview:free: Detected issues: Ring orientation issue
+
+FEATURE 21941:
+--------------------
+qwen/qwen3-14b:free: No issues detected
+microsoft/phi-4-reasoning-plus:free: No issues detected
+mistralai/mistral-7b-instruct:free: No issues detected
+qwen/qwen3-32b:free: Detected issues: Self-intersection, Invalid geometry
+meta-llama/llama-3.3-8b-instruct:free: Detected issues: Self-intersection
+opengvlab/internvl3-14b:free: Detected issues: Self-intersection
+nousresearch/deephermes-3-mistral-24b-preview:free: Detected issues: Precision/coordinate issue
+
+
+Model Performance Summary:
+------------------------------
+
+qwen/qwen3-14b:free:
+- Valid responses: 3/3
+- Total issues detected: 0
+  - Self-intersections: 0
+  - Invalid geometries: 0
+  - Ring orientation: 0
+  - Precision/coordinate: 0
+
+microsoft/phi-4-reasoning-plus:free:
+- Valid responses: 3/3
+- Total issues detected: 0
+  - Self-intersections: 0
+  - Invalid geometries: 0
+  - Ring orientation: 0
+  - Precision/coordinate: 0
+
+mistralai/mistral-7b-instruct:free:
+- Valid responses: 3/3
+- Total issues detected: 0
+  - Self-intersections: 0
+  - Invalid geometries: 0
+  - Ring orientation: 0
+  - Precision/coordinate: 0
+
+qwen/qwen3-32b:free:
+- Valid responses: 3/3
+- Total issues detected: 6
+  - Self-intersections: 3
+  - Invalid geometries: 2
+  - Ring orientation: 1
+  - Precision/coordinate: 0
+
+meta-llama/llama-3.3-8b-instruct:free:
+- Valid responses: 3/3
+- Total issues detected: 2
+  - Self-intersections: 2
+  - Invalid geometries: 0
+  - Ring orientation: 0
+  - Precision/coordinate: 0
+
+opengvlab/internvl3-14b:free:
+- Valid responses: 3/3
+- Total issues detected: 2
+  - Self-intersections: 2
+  - Invalid geometries: 0
+  - Ring orientation: 0
+  - Precision/coordinate: 0
+
+nousresearch/deephermes-3-mistral-24b-preview:free:
+- Valid responses: 3/3
+- Total issues detected: 3
+  - Self-intersections: 0
+  - Invalid geometries: 0
+  - Ring orientation: 1
+  - Precision/coordinate: 2
+

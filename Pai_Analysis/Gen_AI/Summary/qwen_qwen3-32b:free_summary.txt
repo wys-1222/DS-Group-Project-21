@@ -1,0 +1,12 @@
+SUMMARY FOR qwen/qwen3-32b:free
+==================================================
+
+Issues detected:
+- Feature 21936: Self-intersection detected
+- Feature 21936: Invalid geometry detected
+- Feature 50456: Self-intersection detected
+- Feature 50456: Ring orientation issue detected
+- Feature 21941: Self-intersection detected
+- Feature 21941: Invalid geometry detected
+
+Model produced 3 valid responses out of 3 features.

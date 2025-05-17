@@ -1,0 +1,8 @@
+SUMMARY FOR opengvlab/internvl3-14b:free
+==================================================
+
+Issues detected:
+- Feature 21936: Self-intersection detected
+- Feature 21941: Self-intersection detected
+
+Model produced 3 valid responses out of 3 features.

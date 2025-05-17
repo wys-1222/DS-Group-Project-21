@@ -1,0 +1,9 @@
+SUMMARY FOR nousresearch/deephermes-3-mistral-24b-preview:free
+==================================================
+
+Issues detected:
+- Feature 21936: Precision/coordinate issue detected
+- Feature 50456: Ring orientation issue detected
+- Feature 21941: Precision/coordinate issue detected
+
+Model produced 3 valid responses out of 3 features.

@@ -1,0 +1,47 @@
+ANALYSIS RESULTS FOR qwen/qwen3-32b:free
+==================================================
+
+FEATURE 21936:
+FEATURE [21936]:  
+Self-intersections: **Yes**  
+Invalid geometries: **Yes**  
+Ring orientation issues: **No**  
+Precision/coordinate issues: **No**  
+
+**Explanation:**  
+1. **Self-intersections:** The first polygon exhibits suspiciously convoluted coordinate sequences (e.g., jumping between `[146.75841546, -19.32305177]` → `[146.75850356, -19.32328277]` → `[146.75849756, -19.32320667]`), suggesting a "bowtie" fold where ring edges cross themselves. The sixth polygon also has edges that appear to reverse direction sharply (e.g., `[146.75883006, -19.32373777]` → `[146.75882886, -19.32374007]` then back to the start point), potentially crossing an earlier segment.  
+2. **Invalid geometries:** None of the polygons explicitly close their rings (the first and last coordinates of each ring are not identical). GeoJSON requires all LinearRings to explicitly close with the starting point.  
+3. **Ring orientation:** Cannot confirm orientation errors because strict validation (e.g., direction checks) depends on closed rings, which are invalidated by the lack of closure.  
+4. **Precision:** Coordinates are precise to 5 or 6 decimal places, which is within acceptable bounds for geographic data (approx. 1–11 cm precision, depending on latitude). No extreme values are present.  
+
+**Recommendation:** Fix the unclosed rings and simplify complex paths to resolve self-intersections. Use a geometry validator like Shapely to confirm.
+
+FEATURE 50456:
+FEATURE 50456:
+Self-intersections: Yes
+Invalid geometries: No
+Ring orientation issues: Yes
+Precision/coordinate issues: No
+
+Self-intersections: The first polygon exhibits problematic self-intersections. When tracing the coordinates, the path from [149.17127825, -35.28396006] to [149.17118025, -35.28391066] overlaps with earlier segments, and the final segment [149.17107445, -35.28360016] to [149.17151355, -35.28442816] creates a figure-eight looping pattern. The second polygon's outer ring also shows irregular movement that likely results in self-intersections.
+
+Invalid geometries: All rings are closed (first and last coordinates match), and there are no obvious duplicate vertices listed in the coordinate sequences, so no invalid geometries detected.
+
+Ring orientation issues: The first polygon's **outer ring orientation is problematic**. While not definitively detected without a full area calculation, the sequence of coordinates doesn't maintain a clear counterclockwise direction. Similarly, the second polygon's outer ring's complex coordinate path suggests the overall orientation might not conform to expected CCW/outer ring requirements. The inner ring in the second polygon appears to be correctly oriented as a clockwise ring for a hole, as the first few coordinate pairs suggest a clockwise turn.
+
+Precision/coordinate issues: Coordinates are within valid EPSG:4326 (longitude between ~149.17 to 149.174 and latitude ~-35.28 to -35.284) and use 5-7 decimal places (within reasonable precision for geodetic data). No extreme or suspect values present.
+
+FEATURE 21941:
+FEATURE 21941:  
+Self-intersections: **YES**  
+Invalid geometries: **YES**  
+Ring orientation issues: **NO**  
+Precision/coordinate issues: **NO**  
+
+**Explanation:**  
+- **Self-intersections & Invalid geometries:** The second polygon (coordinates array) exhibits a tight zig-zag loop where the boundary crosses itself. Coordinates like `[146.75765186, -19.32497277]` and `[146.75785746, -19.32518127]` create overlapping segments when connected in sequence, forming a self-intersecting ring. This invalidates the geometry according to OGC standards.  
+- **Ring orientation:** All outer rings appear to follow a consistent orientation. The first polygon’s coordinates start and end at the same point, forming a closed loop, and the sequence suggests counterclockwise traversal (no clear reversal in direction).  
+- **Precision/coordinate issues:** Coordinates are within standard GPS precision (7 decimal places) and have no inconsistent values (e.g., longitudes over 180 or invalid ranges).  
+
+Self-intersections are a type of invalid geometry, so both categories are marked "YES" for this case.
+
